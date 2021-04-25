@@ -14,7 +14,6 @@ Heroku :Spins up a container when u deploy
             “Procfile” without any file extension in your project root (top most)
               web: gunicorn projectname.wsgi --log-file -
     For python requirments.txt is auto run
-    https://stackoverflow.com/questions/16416172/how-can-i-modify-procfile-to-run-gunicorn-process-in-a-non-standard-folder-on-he
     
     
 Pre-Req:
