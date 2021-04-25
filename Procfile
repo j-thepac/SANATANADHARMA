@@ -1,0 +1,1 @@
+web: gunicorn SANATANADHARMA_MAIN.wsgi --log-file -
