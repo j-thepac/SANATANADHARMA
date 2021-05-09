@@ -51,7 +51,7 @@ Other
 
 http://www.matrix.umcs.lublin.pl/DOC/python-django-doc/html/howto/deployment/checklist.html
 https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
-
+https://www.youtube.com/watch?v=tUqUdu0Sjyc&list=RDCMUCTZRcDjjkVajGL6wd76UnGg&start_radio=1&t=337
 
 Resources :
 
