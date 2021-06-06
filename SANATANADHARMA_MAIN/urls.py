@@ -20,7 +20,7 @@ from django.views import generic
 urlpatterns = [
     path('register/', include('register.urls')),
     path('login/', include('login.urls')),
-    path('logout/', include('login.urls')),
+    # path('logout/', include('login.urls')),
     path('admin/', admin.site.urls),
     path("",generic.TemplateView.as_view(template_name="index.html"))
 ]
