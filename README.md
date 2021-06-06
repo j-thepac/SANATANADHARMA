@@ -9,6 +9,47 @@ Git :
     main : connected to Heroku
     master : Working branch
 
+Heroku Db:
+
+     db name :postgresql-objective-37602
+
+     commands:
+
+          heroku config -a sanatanadharma -s| grep DATABASE_URL
+          heroku  pg:info -a sanatanadharma
+
+Postgressql:
+
+    $ sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+    $ wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+    $ sudo apt-get update
+    $ sudo apt-get install postgresql
+    $sudo -u postgres createdb $USER
+    $ psql # to start sql
+    $\q # quit psql
+    
+SQlLite3 to Postgres:
+
+    python manage.py dumpdata > db.json
+    Change the database settings to new database such as of MySQL / PostgreSQL.
+
+        DATABASES = {
+        ‘default’: {
+        ‘ENGINE’: ‘django.db.backends.postgresql_psycopg2’,
+        ‘NAME’: ‘my_db’,
+        ‘USER’ : ‘xxxx’,
+        ‘PASSWORD’ : ‘xxxxx’,
+        ‘HOST’ : ‘localhost’,
+        ‘PORT’ : ‘5432’,
+        }
+        }
+    python manage.py migrate
+    python manage.py shell 
+    Enter the following in the shell
+    from django.contrib.contenttypes.models import ContentType
+    ContentType.objects.all().delete()
+    python manage.py loaddata db.json
+
 Heroku :Spins up a container when u deploy
 
     Set to AutoDeploy

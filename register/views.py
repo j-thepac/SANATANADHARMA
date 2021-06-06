@@ -13,7 +13,7 @@ def register(request):
             form.save()
             user= form.cleaned_data.get('username')
             messages.success(request,"Account was created for "+user)
-            return redirect("loginPage") #     return HttpResponse(form.errors.values())
+            return redirect("login") #     return HttpResponse(form.errors.values())
 
     context = {'form': form}
     return render(request,"register.html",context)
