@@ -14,7 +14,7 @@ def user_home(request):
         # if logoutbutton:
         print("hi")
         logoutUser(request)
-    return render(request, "userhome.html")
+    return render(request, "user_dashboard.html")
 
 
 

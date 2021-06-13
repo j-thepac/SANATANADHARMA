@@ -1,29 +1,39 @@
 # SANATANADHARMA
 
-URL:
+
+## _The Truth
+
+![](templates/dj.jpg)
+
+![N|Solid](https://mir-s3-cdn-cf.behance.net/project_modules/disp/cb29aa8482395.560be27480665.jpg)
+
+
+
+##URL:
 
     https://sanatanadharma.herokuapp.com/
 
-Admin Panel
+##Admin Panel
 
     https://sanatanadharma.herokuapp.com/admin 
 
-Git :
+##Git :
 
-    There is 1 branches only
-    main : connected to Heroku
+- There is 1 branches only
+- main : connected to Heroku
 
-Heroku :Spins up a container when u deploy
+##Heroku :
+Spins up a container when u deploy
 
-    Set to AutoDeploy
-    logs :More > view logs 
-    Procfile: Commands to run when container is spun up.
+- Set to AutoDeploy
+- logs :More > view logs 
+- Procfile: Commands to run when container is spun up.
             “Procfile” without any file extension in your project root (top most)
               web: gunicorn projectname.wsgi --log-file -
-    For python requirments.txt is auto run
+- For python requirments.txt is auto run
     
     
-Pre-Req:
+##Pre-Req:
 
 
     1.  Install python 3+
@@ -35,16 +45,16 @@ Pre-Req:
     4.  Make sure u create a bashrc file has DJANGO_SECRET_KEY="key values" and DJANGO_DEBUG = "True" 
 
 
-Files:
+##Files:
 
     procfile - used for Heroku
     
-Steps :
+##Steps :
 
     cd SANATANADHARMA/
     python manage.py runserver
 
-To Add new App:
+##To Add new App:
     
     python manage.py startapp appname
     create urls.py in appname app
@@ -57,11 +67,11 @@ Create Super User:
     $heroku login                   # make sure heroku cli is installed
     $heroku run python manage.py createsuperuser -a sanatanadharma
 
-DB (Local) :
+##DB (Local) :
 
     Using built in SQLLite3 but remotly using postgres. AS sqllite is not supported in Heroku
 
-Install Postgressql locally (optional) :
+##Install Postgressql locally (optional) :
 
     $ sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
     $ wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
@@ -93,7 +103,7 @@ Install Postgressql locally (optional) :
         ContentType.objects.all().delete()
         python manage.py loaddata db.jsone
 
-Heroku Db (Remote):
+##Heroku Db (Remote):
     
      db name :postgresql-objective-37602
      commands:
@@ -101,7 +111,7 @@ Heroku Db (Remote):
           heroku config -a sanatanadharma -s| grep DATABASE_URL
           heroku  pg:info -a sanatanadharma
 
-Heroku add Postgres addon:
+##Heroku add Postgres addon:
 
     settings.py:
 
@@ -114,20 +124,20 @@ Heroku add Postgres addon:
     $heroku run python manage.py migrate -a sanatanadharma
     $heroku run python manage.py createsuperuser -a sanatanadharma
 
-To Change Database in Heroku :
+##To Change Database in Heroku :
     
     Heroku > sanatanadharma > settings >Reveal Config vars
     Change DATABASE_URL (eg- postgres://usn:pass@db_url:port/db_name )
     make sure the remote DB has permission to read / write 
 
 
-Other
+##Other
 
     python -m django --version #check version
     django-admin    #all commands 
 
 
-Ref Url :
+##Ref Url :
 
     http://www.matrix.umcs.lublin.pl/DOC/python-django-doc/html/howto/deployment/checklist.html
     https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
@@ -135,8 +145,10 @@ Ref Url :
     26:52
     https://www.ordinarycoders.com/blog/article/django-user-register-login-logout
 
-Resources :
+##Resources :
     
     1.  Heroku+Git :https://www.youtube.com/watch?v=Q_YOYNiSVDY
     2.  Heroku+Git :https://studygyaan.com/django/django-everywhere-host-your-django-app-for-free-on-heroku
     3.  https://www.youtube.com/watch?v=hu99aiU0tIA
+    4. https://dillinger.io/
+    5. https://readme.so/
