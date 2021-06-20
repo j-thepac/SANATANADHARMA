@@ -3,7 +3,7 @@
 
 ## _The Truth
 
-![](templates/dj.jpg)
+![](static/dj.jpg)
 
 ![N|Solid](https://mir-s3-cdn-cf.behance.net/project_modules/disp/cb29aa8482395.560be27480665.jpg)
 

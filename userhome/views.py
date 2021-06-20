@@ -8,13 +8,14 @@ from django.contrib import messages
 
 
 def user_home(request):
-    if (not request.user.is_authenticated): return HttpResponse("User not logged in")
-    if (request.method == "POST"):
-        # logoutbutton = request.POST.get('Logout')
-        # if logoutbutton:
+    if not request.user.is_authenticated:
+        return HttpResponse("User not logged in")
+    elif request.method == "POST":
         print("hi")
-        logoutUser(request)
-    return render(request, "user_dashboard.html")
+        return logoutUser(request)
+    else:
+        userdetails={"username":request.user.username}
+        return render(request, "user_dashboard.html",userdetails)
 
 
 
@@ -22,3 +23,4 @@ def logoutUser(request):
     logout(request)
     return HttpResponse("User logget out")
     # return redirect("login")
+
