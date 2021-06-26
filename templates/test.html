@@ -4,8 +4,24 @@
 </head>
 <h1>
     Date: {% now "jS F Y H:i:s" %}
+
+    <form method="POST">
+        {% csrf_token %}
+        <button type='submit'>Logout</button>
+    </form>
 </h1>
 <body>
+
+
+    <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
+
+    <li><a class="dropdown-item" href="#">New project...</a></li>
+    <li><a class="dropdown-item" href="#">Settings</a></li>
+    <li><a class="dropdown-item" href="#">Profile</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="#">Sign out</a></li>
+    </ul>
+
 
 </body>
 </html>

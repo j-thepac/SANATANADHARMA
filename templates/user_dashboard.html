@@ -1,68 +1,121 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+<link rel="stylesheet" href="{% static 'user_dashboard.css' %}">
 
 
-<style>
-body {
-  font-family: "Lato", sans-serif;
-}
-
-.sidenav {
-  width: 130px;
-  position: fixed;
-  z-index: 1;
-  top: 20px;
-  left: 10px;
-  background: #eee;
-  overflow-x: hidden;
-  padding: 8px 0;
-}
-
-.sidenav a {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #2196F3;
-  display: block;
-}
-
-.sidenav a:hover {
-  color: #064579;
-}
-
-.main {
-  margin-left: 140px; /* Same width as the sidebar + left position in px */
-  font-size: 28px; /* Increased text to enable scrolling */
-  padding: 0px 10px;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-</style>
 </head>
 <body>
 
-<div class="sidenav">
-  <a href="#about">About</a>
-  <a href="#services">Services</a>
-  <a href="#clients">Clients</a>
-  <a href="#contact">Contact</a>
-                           <form method="POST">
-                        {% csrf_token %}
-                        <button type='submit'>Logout</button>
-                        </form>
+<!--<div class="sidenav">-->
+<!--<ul class="list-group list-group-flush">-->
+<!--  <li class="list-group-item">An item</li>-->
+<!--  <li class="list-group-item">A second item</li>-->
+<!--  <li class="list-group-item">A third item</li>-->
+<!--  <li class="list-group-item">A fourth item</li>-->
+<!--  <li class="list-group-item">And a fifth one</li>-->
+<!--</ul>-->
+<!--</div>-->
+<div class="row">
+
+    <div class="leftcolumn">
+
+        <h1 class="text-center"> SANANTHANA DHARMA</h1>
+        </div>
+    <div class="rightcolumn">
+    <form method="POST">
+    {% csrf_token %}
+    <button type='submit'>Logout</button>
+    </form>
+    </div>
+ </div>
+
+
+
+
+<div class="row">
+    <div class="leftcolumn">
+
+    <div class="card">
+      <h2>HI , {{username}}</h2>
+      <h5> Date: {% now "jS F Y H:i:s" %}</h5>
+      <div class="fakeimg" style="height:200px;">Image</div>
+      <p>Some text..</p>
+      <p>
+yama-niyamâsana-prâñâyâma-pratyâhâra-dhârañâ-dhyâna-samâdhayo ‘stâv angâni
+      </p>
+    </div>
+  </div>
+
+
+     <div class="rightcolumn">
+    <div class="d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 280px;">
+    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+    <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+    <span class="fs-4">Sidebar</span>
+    </a>
+    <hr>
+    <ul class="nav nav-pills flex-column mb-auto">
+    <li class="nav-item">
+    <a href="#" class="nav-link active" aria-current="page">
+      <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
+      Home
+    </a>
+    </li>
+    <li>
+    <a href="#" class="nav-link link-dark">
+      <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
+      Dashboard
+    </a>
+    </li>
+    <li>
+    <a href="#" class="nav-link link-dark">
+      <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"></use></svg>
+      Orders
+    </a>
+    </li>
+    <li>
+    <a href="#" class="nav-link link-dark">
+      <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
+      Products
+    </a>
+    </li>
+    <li>
+    <a href="#" class="nav-link link-dark">
+      <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
+      Customers
+    </a>
+    </li>
+    </ul>
+    <hr>
+    <div class="dropdown">
+    <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
+    <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+    <strong>mdo</strong>
+    </a>
+
+
+
+
+    </div>
+    </div>
 </div>
 
-<div class="main">
-  <h2>HI , {{username}}</h2>
-  <p>This sidebar is as tall as its content (the links), and is always shown.</p>
-  <p>Scroll down the page to see the result.</p>
+<!--    <div class="card">-->
+<!--    <h2>HI , {{username}}</h2>-->
+<!--    <p>This sidebar is as tall as its content (the links), and is always shown.</p>-->
+<!--    <p>Scroll down the page to see the result.</p>-->
+<!--    </div>-->
+
 </div>
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 </body>
 </html>
