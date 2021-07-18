@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,14 +26,16 @@
 
     <div class="leftcolumn">
 
-        <h1 class="text-center"> SANANTHANA DHARMA</h1>
-        </div>
-    <div class="rightcolumn">
-    <form method="POST">
-    {% csrf_token %}
-    <button type='submit'>Logout</button>
-    </form>
+    <h1 class="text-center" > SANANTHANA DHARMA</h1>
+  </div>
+
+    <div class="rightcolumn text-end">
+        <form method="POST">
+        {% csrf_token %}
+        <button type='submit' class="btn btn-link">Logout</button>
+        </form>
     </div>
+
  </div>
 
 
@@ -41,10 +45,11 @@
     <div class="leftcolumn">
 
     <div class="card">
-      <h2>HI , {{username}}</h2>
+      <h2>Welcome , {{username}}</h2>
       <h5> Date: {% now "jS F Y H:i:s" %}</h5>
-      <div class="fakeimg" style="height:200px;">Image</div>
-      <p>Some text..</p>
+        <img src="{% static 'bhakti1.jpeg'%}" class="img-fluid rounded mx-auto d-block w-100 p-3" width="120" height="90" />
+
+<!--      <div class="fakeimg" style="height:200px;">Image</div>-->
       <p>
 yama-niyamâsana-prâñâyâma-pratyâhâra-dhârañâ-dhyâna-samâdhayo ‘stâv angâni
       </p>
@@ -66,36 +71,28 @@ yama-niyamâsana-prâñâyâma-pratyâhâra-dhârañâ-dhyâna-samâdhayo ‘st�
       Home
     </a>
     </li>
+
     <li>
     <a href="#" class="nav-link link-dark">
       <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
       Dashboard
     </a>
     </li>
+
     <li>
     <a href="#" class="nav-link link-dark">
       <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"></use></svg>
       Orders
     </a>
     </li>
-    <li>
-    <a href="#" class="nav-link link-dark">
-      <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
-      Products
-    </a>
-    </li>
-    <li>
-    <a href="#" class="nav-link link-dark">
-      <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
-      Customers
-    </a>
-    </li>
+
+
     </ul>
     <hr>
     <div class="dropdown">
     <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
     <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
-    <strong>mdo</strong>
+    <strong>Profile</strong>
     </a>
 
 
