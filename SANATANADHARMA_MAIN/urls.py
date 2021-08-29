@@ -18,9 +18,11 @@ from django.urls import path,include
 from django.views import generic
 
 urlpatterns = [
-    path('register/', include('register.urls')),
-    path('login/', include('login.urls')),
-    # path('logout/', include('login.urls')),
+    # path('register/', include('Main.urls')),
+    # path('login/', include('Main.urls')),
+    # # path('logout/', include('login.urls')),
     path('admin/', admin.site.urls),
-    path("",generic.TemplateView.as_view(template_name="index.html"))
+    # path("",generic.TemplateView.as_view(template_name="index.html"))
+    path('', include('Main.urls')),
+
 ]
