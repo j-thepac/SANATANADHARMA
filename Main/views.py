@@ -14,7 +14,13 @@ class CreateUserForm(UserCreationForm):
         fields=['username','email','password1','password2']
 
 def index(request):
-    return render(request,'index.html')
+    return render(request,'index2.html')
+    
+def events(request):
+    return render(request,'events.html')
+
+def contact(request):
+    return render(request,'contact.html')
 
 def loginPage(request):
     if ( request.user.is_authenticated):return redirect('user_home')
