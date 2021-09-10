@@ -14,7 +14,7 @@ class CreateUserForm(UserCreationForm):
         fields=['username','email','password1','password2']
 
 def index(request):
-    return render(request,'index2.html')
+    return render(request,'index.html')
     
 def events(request):
     return render(request,'events.html')

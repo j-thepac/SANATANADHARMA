@@ -14,30 +14,19 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #0c0c0b;">
-        <a class="navbar-brand text-white" href="#">
-            SanathanaDharma
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
         <div class="navbar-collapse" id="navbarColor03">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link text-white" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link text-white" href="/events/">Events <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link text-white" href="/contact/">Contact <span class="sr-only">(current)</span></a>
-                </li>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" style="background-color: #0c0c0b;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     Menu
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="/events/">Events</a>
+                        <a class="dropdown-item" href="/contact/">Contact</a>
+                    </div>
+                </div>
             </ul>
-
-
-
             <form class="form-inline">
-                <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> -->
                 <div class="col px-md-2">
                     <a href="/login/" class="w3-padding-large w3-hover-red w3-hide-small w3-right text-white">Login</a>
                 </div>
