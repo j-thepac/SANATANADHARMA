@@ -27,12 +27,10 @@ def loginPage(request):
     if (request.method=="POST"):
         username=request.POST.get("username")
         password=request.POST.get("password")
-        print("hi")
         user = authenticate(username=username,password=password)
         if (user is not None):
             login(request,user)
             return redirect('user_home')
-            # return render(request,"index.html")
         else:
             messages.info(request,'Username or Password incorrect')
     return render(request,"login.html")
